@@ -1,0 +1,116 @@
+body 
+   {
+    background-color:rgb(234, 221, 202);
+    background-repeat: no-repeat;
+    background-image: url(paper.jpg);
+    background-size:cover;
+   }
+
+#decor{
+	background-color:rgb(234, 221, 202);
+	background-repeat: no-repeat;
+	background-image: url(cas.jpg);
+	background-size:cover;
+	display:inline-block;
+	position:relative;
+	width:30%;
+	height:100%;
+	box-shadow:15px 15px 50px 15px black;
+	}
+	
+
+#head{
+	background-color:rgb(64, 224, 208, .8);
+	position:absolute;
+	display:inline-block;
+	width:68%;
+	height:8vw;
+	margin-left:1vw;
+	border-bottom : 1vw solid rgb(240, 243, 244, .8);
+	box-shadow:15px 15px 50px 15px black;
+	overflow:hidden;
+     }
+
+
+#head h1 {
+	   font-size:5.5vw;
+	   margin-top:1vw;
+	   margin-left:1.2vw;
+	   font-family:IM Fell DW Pica;
+         }
+
+#decor .ul {
+           list-style:none;
+	   margin-top:0vw;
+           padding:0.5vw 0vw 0.5vw 0.5vw;
+          }
+
+#decor .ul .main{
+                 float:middle;
+                 background-image: url(radio1.jpg);
+                 background-size:cover;
+                 background-position:center;
+                 border: 2px solid white;
+		 width:90%;
+                 padding: 0.1vw auto;
+                 transition:transform 0.5s;
+	         margin-top:1.5vw;
+               }
+
+#decor .ul .main:hover   {
+                          transform:scale(1.1);
+                          background-image: url(radio2.jpg);
+                          background-size:cover;
+                          background-position:center;
+                        }
+
+#decor .ul .main a {
+		    font-size:2.5vw;
+       		    position:relative;
+       		    font-family:IM Fell DW Pica;
+              	    color:white;
+                    text-decoration: none;
+                    text-shadow: 4px 4px 10px black;
+                  }
+
+#photo {
+	display:inline-block;
+	position:relative;
+        background-image: url(radio1.jpg);
+        background-size:cover;
+        background-position:center;
+        border: 2px solid white;
+        
+	width:95%;
+        height:8vw;
+	margin-top:0.4vw;        
+
+	animation-name:box;
+        animation-direction:alternate-reverse;
+        animation-duration: 15s;  
+        animation-iteration-count: infinite;
+        animation-play-state:running;
+        animation-timing-function:ease-in-out;    
+      }
+
+@keyframes box{
+               0%{background-image: url(radio2.jpg);}
+               33%{background-image: url(radio3.jpg);}
+               66%{background-image: url(radio4.jpg);}
+               100%{background-image: url(radio1.jpg);}
+              }
+
+#back {
+	background-color:rgba(0, 0, 0, 0.4);
+	margin-top:1vw;
+	width:93%;
+	height:14.5vw;
+	border-radius:0px 0px 1vw 1vw;
+      }
+
+#set{
+	position:absolute;
+        float:right;
+	margin-top:10.5vw;
+	margin-left:1vw;
+    }

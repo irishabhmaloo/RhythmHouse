@@ -1,0 +1,294 @@
+<html>
+<head>
+	<title>order</title>
+	<link href='https://fonts.googleapis.com/css?family=IM Fell DW Pica' rel='stylesheet'>
+	<style>
+	td{
+	   color:white;
+	   text-shadow: 2px 2px 5px black;
+	   padding:0.2vw 1vw;
+	  }
+
+	.button{
+		border: 2px solid grey;
+		padding:1vw 0vw;
+	        width:40%;
+		margin:0vw 2vw;
+		font-family:IM Fell DW Pica;
+		font-size:15px;
+	       }
+
+	.button:hover{
+			background-color:rgb(128, 128, 128, .4);
+			border: 2px solid white;
+			color:white;
+			text-shadow: 2px 2px 5px black;
+		     }
+	</style>
+
+</head>
+
+<body style="background-color:rgba(0, 0, 0, .6);">
+<font style="color:white">
+<form name="form" onsubmit="return check()" action="message.html">
+<fieldset>
+<legend>CONTACT DETAILS</legend>
+<table>
+
+<tr>
+	<td>
+	<label for="fname">First Name : </label>
+	<input type="text" id="fname" name="fname" required autocomplete="on">
+	</td>
+
+	<td>
+	<label for="lname">Last Name : </label>
+	<input type="text" id="lname" name="lname" required autocomplete="on">
+	</td>
+</tr>
+
+<tr>
+	<td> 
+	<label for="mobilenum">Mobile No. : </label>
+	<input type="tel" id="mobilenum" name="mobilenum" placeholder="enter the 10-digit number" required autocomplete="on"> 
+	</td>
+
+	<td> 
+	<label for="email">E-MAIL (optional) : </label>
+	<input type="email" id="email" name="email" placeholder="ex : abcd@gmail.com" autocomplete="on"> 
+	</td>
+</tr>
+</table>
+</fieldset>
+
+<br>
+
+<fieldset>
+<legend>SHIPPING ADDRESS</legend>	
+<table>
+
+<tr>
+	<td colspan="2">
+	<label for="pin">Pin Code : </label>
+	<input type="number" id="pin" name="pin" placeholder="Minimum length is 6*" required autocomplete="on" min="200000">
+	</td>
+</tr>
+
+<tr>
+	<td colspan="2">
+	<label for=“address">Address : </label>
+	<textarea id="address" name="address" placeholder="(House No, Building, Street, Area)*" required style="width:500px; height:50px;"></textarea>
+	</td>
+</tr>
+
+<tr>
+	<td>
+	<label for="town">Taluka : </label>
+	<input type="text" id="town" name="town" placeholder="Locality / Town*" required autocomplete="on">
+	</td>
+	
+	<td>
+	<label for="city">District : </label>
+	<input type="text" id="city" name="city" placeholder="City*" required autocomplete="on"?>
+	</td>
+</tr>
+
+<tr>
+	<td colspan="2">
+	<label for="state">State : </label>
+	<input list="state" placeholder="Select your state">
+	<datalist id="state">
+	<option value="Andhra Pradesh">
+	<option value="Arunachal Pradesh">
+	<option value="Assam">
+	<option value="Bihar">
+	<option value="Chhattisgarh">
+	<option value="Goa">
+	<option value="Gujarat">
+	<option value="Haryana">
+	<option value="Himachal Pradesh">
+	<option value="Jharkhand">
+	<option value="Karnataka">
+	<option value="Kerala">
+	<option value="Madhya Pradesh">
+	<option value="Maharashtra">
+	<option value="Manipur">
+	<option value="Meghalaya">
+	<option value="Mizoram">
+	<option value="Nagaland">
+	<option value="Odisha">
+	<option value="Punjab">
+	<option value="Rajasthan">
+	<option value="Sikkim">
+	<option value="Tamil Nadu">
+	<option value="Telangana">
+	<option value="Tripura">
+	<option value="Uttar Pradesh">
+	<option value="Uttarakhand">
+	<option value="West Bengal">
+	</datalist>
+	</td>
+</tr>
+
+</table>
+</fieldset>
+
+<br>
+
+<fieldset>
+<legend>PAYMENT</legend>
+<table>
+
+<tr>
+	<td>
+	<input type="radio" onclick="select1()" id="cod" name="pay" value="cod" required>
+        <label for="cod">Cash On Delivery</label>
+	</td>
+
+	<td>
+	<input type="radio" onclick="select2()" id="cd" name="pay" value="cd" required>
+        <label for="cd">Credit/Debit Card</label>
+	</td>
+
+	<td>
+	<input type="radio" onclick="select3()" id="netb" name="pay" value="netb" required>
+        <label for="netb">Net Banking</label>
+	</td>
+</tr>
+
+</table>
+
+<div id="cdc" style="display:none;">
+<table>
+
+<tr>
+	<td colspan="2">
+	<label for="cardnum">Card No. : </label>
+	<input type="tel" id="cardnum" name="cardnum" pattern="[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}" placeholder="0000 0000 0000 0000" autocomplete="off"> 
+	</td>
+</tr>
+	
+<tr>
+	<td colspan="2">
+	<label for="cname">Name Of Card : </label>
+	<input type="text" id="cname" name="cname" autocomplete="off">
+	</td>
+</tr>
+
+<tr>
+	<td>
+	<label for="val">Valid Thru : </label>
+	<input type="tel" id="val" name="val" pattern="[0-1]{1}[1-9]{1}/[0-9]{2}" placeholder="mm/yy" autocomplete="off">
+	</td>
+
+	<td>
+	<label for="cvv">CVV : </label>
+	<input type="tel" id="cvv" name="cvv" pattern="[1-9]{3}" placeholder="3-digit code" autocomplete="off">
+	</td>
+</tr>
+
+</table>
+</div>
+
+<div id="bank" style="display:none;">
+<table>
+
+<tr>
+	<td>
+	<label for="bname">Name Of The Bank : </label>
+	<input type="text" id="bname" name="bname" autocomplete="off">	
+	</td>	
+</tr>
+
+</table>
+</div>
+</fieldset>
+
+
+<br>
+<center>
+<input class="button" type ="submit" id="submit "value="SAVE MY DETAILS">
+<input class="button" type="reset" value="RESET">
+</center>
+
+</font>
+</form>
+
+<script type="text/javascript">
+
+function check()
+{
+	var mobile = document.form.mobilenum.value;
+	if(isNaN(mobile))
+	{
+		alert("Only Digits Allowed");
+	}
+	if(mobile.length==10)
+	{
+		for(let i=0 ; i<mobile.length ; i++)
+		{
+			if(mobile[0]=='0')
+			{
+			 alert("Invalid Number");
+			 break;
+			 return false;
+			}
+			else
+			{
+			 return true;
+			}
+		}
+		return false;
+	}
+	else if(mobile.length!=10)
+	{
+	 alert("Number should contain 10 digits");
+	 return false;
+	}
+	else
+	{
+	 true;
+	}
+	
+}
+
+function select1()
+{
+	 document.getElementById("cdc").style.display = 'none';
+	 document.getElementById("bank").style.display = 'none';
+	 document.getElementById("bname").required = false;
+	 document.getElementById("cardnum").required = false;
+ 	 document.getElementById("cname").required = false;
+	 document.getElementById("val").required = false;
+	 document.getElementById("cvv").required = false;
+	 return true;
+}
+
+function select2()
+{
+	 document.getElementById("bank").style.display = 'none';
+	 document.getElementById("cdc").style.display = 'block';
+	 document.getElementById("cardnum").required = true;
+ 	 document.getElementById("cname").required = true;
+	 document.getElementById("val").required = true;
+	 document.getElementById("cvv").required = true;
+	 document.getElementById("bname").required = false;
+	 return true;
+}
+
+function select3()
+{
+	 document.getElementById("bank").style.display = 'block';
+	 document.getElementById("cdc").style.display = 'none';
+	 document.getElementById("bname").required = true;
+	 document.getElementById("cardnum").required = false;
+ 	 document.getElementById("cname").required = false;
+	 document.getElementById("val").required = false;
+	 document.getElementById("cvv").required = false;
+	 return true;
+}
+
+</script>
+
+</body>
+</html>

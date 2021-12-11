@@ -1,0 +1,376 @@
+body 
+   {
+    background-color:rgb(234, 221, 202);
+    background-repeat: no-repeat;
+    background-image: url(paper.jpg);
+    background-size:cover;
+   }
+
+#name {
+       background-image: url(radio1.jpg);
+       background-repeat: no-repeat;
+       background-size:cover;
+       background-position:center;
+
+       display: inline-block;
+       width:98%;
+       height:15vw;
+       position:relative;
+       text-align:center;
+       box-shadow:15px 15px 50px 15px black;
+
+       margin-left:1vw;
+       margin-top:1.4vw;
+
+       animation-name:box;
+       animation-direction:alternate-reverse;
+       animation-duration: 15s;  
+       animation-iteration-count: infinite;
+       animation-play-state:running;
+       animation-timing-function:ease-in-out;    
+      }
+
+@keyframes box{
+               0%{background-image: url(radio2.jpg);}
+               33%{background-image: url(radio3.jpg);}
+               66%{background-image: url(radio4.jpg);}
+               100%{background-image: url(radio1.jpg);}
+              }
+
+#title h1 {
+           font-size:10vw;
+           color:white;
+           margin-top:1.2vw; 
+           text-shadow: 4px 4px 10px black;
+          }
+
+#menu{
+       display:inline-block;
+       background-color:azure;
+       width:98%;
+       height:5vw;
+       position:relative;
+       box-shadow:15px 15px 50px 15px black;
+       
+       font-size:2vw;
+ 
+       margin-left:1vw;
+       margin-top:1.3vw;
+     }
+
+#menu .ul {
+           list-style:none;
+           margin-top:0.5vw;
+           padding:0.5vw 0vw 0.5vw 0.5vw;
+          }
+
+#menu .ul .main{
+                float:left;
+                background-image: url(radio1.jpg);
+                background-size:cover;
+                background-position:center;
+                box-shadow:15px 15px 50px 15px black;
+                border: 0.2vw solid white;
+                margin:0vw 1.1vw;
+                padding: 0.1vw 3.7vw;
+                transition:transform 0.5s;
+               }
+
+#menu .ul .main:hover   {
+                         transform:scale(1.1);
+                         background-image: url(radio2.jpg);
+                          background-size:cover;
+                          background-position:center;
+                        }
+
+#menu .ul .main a {
+       		   position:relative;
+       		   font-family:IM Fell DW Pica;
+              	   color:white;
+                   text-decoration: none;
+                   text-shadow: 4px 4px 10px black;
+                  }
+
+#run {
+       display:inline-block;
+       background-color:azure;
+       width:100%;
+       height:2.4vw;
+       position:relative;
+       font-family:IM Fell DW Pica;
+       font-size:1.9vw;
+       overflow:hidden;
+       margin-top:1vw;
+     }
+
+#new{
+       background-repeat: no-repeat;
+       background-image: url(evermore.jpg);
+       background-position:center center;
+       background-size:cover;
+       
+       display:inline-block;
+       background-color:azure;
+       width:98%;
+       height:30vw;
+       position:relative;
+       font-family:IM Fell DW Pica;
+       font-size:1.9vw;
+       overflow:hidden;
+       box-shadow:15px 15px 50px 15px black;
+       
+       margin-top:1vw;
+       margin-left:1vw;
+    }
+
+
+#offer{
+       position:relative;
+       width:28%;
+       height:23vw;
+       top:3vw;
+       left:2vw;
+       display:inline-block;
+       float:left;
+       margin-left:1vw;
+      }
+
+.image {       
+        position:absolute;
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
+        box-shadow:15px 15px 50px 15px black;
+              }
+.back{
+      position:absolute;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      display:none;
+      z-index:99;
+     }
+
+#offer:hover .back{
+                   display:inline;
+                  }
+
+.big{
+     margin-right:2vw;
+     margin-bottom:0px;
+     text-align:right;
+    }
+
+.small{
+       margin-top:0px;
+       margin-right:2vw;
+       margin-bottom:1px;
+       text-align:right;
+      }
+
+.tag{
+     margin-top:0px;
+     margin-right:2vw;
+     text-align:right;
+    }
+
+.ad {
+	background-image: url(cd.jpg);
+        background-repeat: no-repeat;
+        background-position:center center;
+        background-size:cover;
+       
+        display:inline-block;
+        background-color:azure;
+        width:98%;
+        height:41vw;
+        position:relative;
+       
+        font-size:1.9vw;
+        overflow:hidden;
+        box-shadow:15px 15px 50px 15px black;
+       
+        margin-top:1vw;
+        margin-left:1vw;
+    }
+
+.head{
+      text-align:center;
+      font-size:3.4vw;
+      width:98%;
+      margin-left:1vw;
+      margin-top:0.6vw;
+      box-shadow:15px 15px 50px 15px black;
+     } 
+
+.ad a , .ad2 a {
+                position:relative;
+       		display:inline-block;
+       		text-align:center;
+       		text-decoration:none;
+       		color:black;
+       		font-size:3.4vw;
+       		width:98%;
+       		height:4vw;
+       		box-shadow:15px 15px 50px 15px black;
+      	       }
+
+.ad a:hover , .ad2 a:hover {
+             			border: 0.2vw solid rgb(230, 230, 250);  
+             			color:white;
+             			text-shadow: 0.1vw 0.1vw 0.5vw black;        
+           		    }
+
+.song{
+      display:inline-block;
+      float:left;
+      margin: 2vw 1.8vw;
+      border-radius:1vw;
+      background-color:rgba(222, 184, 135, .6);
+      box-shadow:15px 15px 25px 02px black;
+      width:21%;
+      height:27.5vw;  
+      overflow:hidden;
+     }
+
+.isong{
+       position:relative;
+       width:85%;
+       height85%;
+       object-fit:contain;
+       margin-left:1.4vw;
+       margin-top:1vw;
+       border: 0.2vw solid rgba(222, 184, 135, 1);
+      }
+
+.audio{
+       position:relative;
+       object-fit:contain;
+       width:90%;
+       height:2.2vw;
+       margin-left:1vw;
+       margin-top:0.2vw;
+       margin-bottom:0.2vw;
+       transition:transform 0.2s;
+      }
+
+.audio:hover{
+             transform:scale(1.1);
+            }
+
+.credit{
+        text-align:center;
+        font-family:IM Fell DW Pica;
+        margin:0.1vw 0vw;
+       }
+
+.pro{
+      position:relative;
+      display:inline-block;
+      float:left;
+      margin: 2vw 1.8vw;
+      border-radius:1vw;
+      background-color:rgba(114, 143, 206, .6);
+      box-shadow:15px 15px 25px 02px black;
+      width:21%;
+      height:24vw;  
+      overflow:hidden;
+     }
+
+.one {       
+        position:absolute;
+        object-fit: contain;
+        width:85%;
+        height:auto;
+        margin-left:1.4vw;
+        margin-top:1vw;
+        border: 0.2vw solid rgba(152, 175, 199, 1);
+      }
+
+.two{
+      position:absolute;
+      object-fit: cover;
+      width: 85%;
+      height:auto;
+      margin-left:1.4vw;
+      margin-top: 1vw;
+      border: 0.2vw solid rgba(152, 175, 199, 1);
+      display:none;
+      z-index:99;
+     }
+
+.pro:hover .two {
+                   display:inline;
+                }
+
+.ad2 {
+        background-image: url(store.jpg);
+	background-repeat: no-repeat;
+        background-position:center center;
+        background-size:cover;
+       
+        display:inline-block;
+        background-color:azure;
+        width:98%;
+        height:38vw;
+        position:relative;
+       
+        font-size:1.9vw;
+        overflow:hidden;
+        box-shadow:15px 15px 50px 15px black;
+       
+        margin-top:1vw;
+        margin-left:1vw;
+    }
+
+#footer{
+        background-image: url(disc.jpg);
+        background-repeat: no-repeat;
+        background-size:cover;
+        background-position:center;
+
+        display: inline-block;
+        width:98%;
+        height:17.5vw;
+        position:relative;
+        text-align:center;
+        box-shadow:15px 15px 50px 15px black;
+
+        margin-left:1vw;
+        margin-top:1.4vw;
+       }
+
+#container{
+           text-align:center;
+           font-size:3.4vw;
+           width:98%;
+           height:15.5vw;
+           margin-left:1vw;
+           margin-top:1vw;
+           background-color:rgba(0 ,0 ,0 ,.5);
+           overflow:hidden;
+          } 
+
+.cont{
+      display:block;
+      color:white;
+      margin-top:0.2vw;
+      margin-bottom:0.2vw;
+      text-shadow: 4px 4px 10px black;
+      font-family:IM Fell DW Pica;
+     }
+
+.cont2{
+       color:white;
+       margin: 2vw 1vw;
+       text-shadow: 4px 4px 10px black;
+       font-family:IM Fell DW Pica;
+     }
+
+.cont2 a {
+	  color:white;
+         }
+
+.cont2 a:hover {
+	        color:rgba(222, 184, 135, 1);
+               }
